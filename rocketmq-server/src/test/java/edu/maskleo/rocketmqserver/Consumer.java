@@ -17,7 +17,7 @@ public class Consumer {
         consumer.setNamesrvAddr("127.0.0.1:9876");
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET);
         /*consumer.setInstanceName("consumer");*/
-        consumer.subscribe("TopicA-test1", "TagA1");
+        consumer.subscribe("TopicA-test2", "TagA2");
         consumer.registerMessageListener(new MessageListenerConcurrently() {
             @Override
             public ConsumeConcurrentlyStatus consumeMessage(

@@ -4,9 +4,13 @@
 
 - [release-notes-4.3.0](http://rocketmq.apache.org/release_notes/release-notes-4.3.0/)
 
-## 系统环境变量
+## 准备工作
 
 - ROCKETMQ_HOME
+- 启动 mqnamesrv `mqnamesrv.cmd`
+- 启动 broker  `./mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true`
+
+## 编码
 
 - 生产者
 
@@ -53,11 +57,29 @@ try {
 producer.shutdown();
 ```
 
+## 其他
+
+- `CONSUME_FROM_TIMESTAMP`//从某个时间点开始消费，和 `setConsumeTimestamp()` 配合使用，默认是半个小时以前
+
 
 ## 参考
 
 - https://blog.csdn.net/hsl_1990_08_15/article/details/80077552
 - http://jm.taobao.org/2017/01/12/rocketmq-quick-start-in-10-minutes/
+- [RocketMQ消费者，设置setConsumeFromWhere无效的问题](https://blog.csdn.net/scutshuxue/article/details/51694334)
+- [RocketMQ系列文章](http://lifestack.cn/archives/tag/rocketmq)
+- [RocketMQ原理解析-Consumer](http://technoboy.iteye.com/blog/2368553)
+- https://blog.csdn.net/lovesomnus/article/details/51776942
+- https://www.cnblogs.com/sunshine-2015/p/6295100.html
+- [RocketMQ事务消费和顺序消费详解](https://www.cnblogs.com/520playboy/p/6750023.html)
+- https://segmentfault.com/a/1190000009919454
+- http://valleylord.github.io/post/201607-mq-rocketmq/
+- [RocketMQ——消息ACK机制及消费进度管理](http://jaskey.github.io/blog/2017/01/25/rocketmq-consume-offset-management/)
+- [ResetOffsetByTimeCommand](https://github.com/apache/rocketmq/blob/0c5e53db6f4d0ed9f25747379a8b679e2da5392d/tools/src/main/java/org/apache/rocketmq/tools/command/offset/ResetOffsetByTimeCommand.java)
+
+## 其他示例
+
+- https://www.programcreek.com/java-api-examples/?class=com.alibaba.rocketmq.client.consumer.DefaultMQPushConsumer&method=subscribe
 
 ## LICENSE
 

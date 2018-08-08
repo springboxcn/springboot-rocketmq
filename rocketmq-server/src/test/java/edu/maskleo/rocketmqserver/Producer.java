@@ -17,7 +17,7 @@ public class Producer {
             Random random = new Random();
             for (int i = 0; i < 100; i++) {
                 Thread.sleep(random.nextInt(100));
-                Message message = new Message("TopicA-test1", "TagA1", (new Date() + " Hello RocketMQ ,QuickStart" + i).getBytes());
+                Message message = new Message("TopicA-test2", "TagA2", (new Date() + " Hello RocketMQ ,QuickStart" + i).getBytes());
                 producer.send(message);
             }
         } catch (Exception e) {
