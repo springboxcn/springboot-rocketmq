@@ -101,6 +101,10 @@ https://rocketmq.apache.org/docs/order-example/
 
 - https://www.programcreek.com/java-api-examples/?class=com.alibaba.rocketmq.client.consumer.DefaultMQPushConsumer&method=subscribe
 
+- https://blog.csdn.net/jenyzhang/article/details/75035802
+
+- https://github.com/apache/rocketmq-externals/blob/master/rocketmq-spring-boot-starter/README_zh_CN.md
+
 ## LICENSE
 
 ![](LICENSE.png)
