@@ -77,6 +77,26 @@ producer.shutdown();
 - [RocketMQ——消息ACK机制及消费进度管理](http://jaskey.github.io/blog/2017/01/25/rocketmq-consume-offset-management/)
 - [ResetOffsetByTimeCommand](https://github.com/apache/rocketmq/blob/0c5e53db6f4d0ed9f25747379a8b679e2da5392d/tools/src/main/java/org/apache/rocketmq/tools/command/offset/ResetOffsetByTimeCommand.java)
 
+
+
+
+
+- [java消息中间件 RocketMQ Linux安装与运行](https://www.cnblogs.com/adamJin/p/6897807.html?utm_source=itdadao&utm_medium=referral)
+- [解决RocketMQ报No route info of this topic：异常](https://blog.csdn.net/zknxx/article/details/52987216)
+- [linux下RocketMQ的安装](https://www.jianshu.com/p/912701cf1705)
+
+`nohup sh mqnamesrv >/var/log/ns.log &`
+`nohup sh mqbroker  -n 127.0.0.1:9876 autoCreateTopicEnable=true > /var/log/mq.log 2>&1 &`
+
+```shell
+nohup sh mqnamesrv >/var/log/ns.log &
+nohup sh mqbroker -n 127.0.0.1:9876 -c ../conf/broker.c autoCreateTopicEnable=true > /var/log/mq.log 2>&1 &
+
+telnet 127.0.0.1 9876
+```
+
+https://rocketmq.apache.org/docs/order-example/
+
 ## 其他示例
 
 - https://www.programcreek.com/java-api-examples/?class=com.alibaba.rocketmq.client.consumer.DefaultMQPushConsumer&method=subscribe
