@@ -19,7 +19,7 @@ public class Producer2 {
         producer.start();
         String[] tags = new String[]{"TagA", "TagB", "TagC"};
         try {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 5; i++) {
                 int orderId = i % 10;
                 Message message = new Message("TopicTestJ", tags[i % tags.length], "k" + i, (new Date() + " Hello RocketMQ ,QuickStart" + i).getBytes(RemotingHelper.DEFAULT_CHARSET));
                 SendResult sr = producer.send(message, new MessageQueueSelector() {
@@ -28,8 +28,8 @@ public class Producer2 {
                         int index = id % mqs.size();
                         return mqs.get(index);
                     }
-                }, orderId);
-                System.out.println(sr);
+                }, 0);
+                System.out.println(new String(message.getBody()));
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -25,11 +25,14 @@ public class Consumer2 {
 
     static class MyMessageListenerOrderly implements MessageListenerOrderly {
         AtomicLong consumeTimes = new AtomicLong(0);
-        public ConsumeOrderlyStatus consumeMessage(List<MessageExt> msgs, ConsumeOrderlyContext context) {
-            context.setAutoCommit(true);
-            System.out.printf(Thread.currentThread().getName() + " Receive New Messages: " + msgs + "%n");
-            return ConsumeOrderlyStatus.SUCCESS;
 
+        public ConsumeOrderlyStatus consumeMessage(List<MessageExt> msgs, ConsumeOrderlyContext context) {
+            context.setAutoCommit(false);
+            /*System.out.printf(Thread.currentThread().getName() + " Receive New Messages: " + msgs + "%n");*/
+            for (MessageExt e : msgs) {
+                System.out.printf(Thread.currentThread().getName() + " Receive New Messages: " + new String(e.getBody()) + "%n");
+            }
+            return ConsumeOrderlyStatus.SUCCESS;
         }
     }
 
