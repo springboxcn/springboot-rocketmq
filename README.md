@@ -1,10 +1,16 @@
 # springboot-rocketmq
 
+## TODO
+
+- 完善示例
+- 控制台参数相关补充
+- `rocketmq` `rabbitmq` `activemq` `kafka` 区别 
+
+
 ## 使用方式
 
 - [无序](client/src/main/java/edu/maskleo/client/simple)
 - [有序](client/src/main/java/edu/maskleo/client/order)
-- 
 
 ## 下载
 
