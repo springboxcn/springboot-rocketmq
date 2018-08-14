@@ -2,9 +2,9 @@
 
 ## TODO
 
--[ ] 完善示例
--[ ] 控制台参数相关补充
--[ ] `rocketmq` `rabbitmq` `activemq` `kafka` 区别 
+- [ ] 完善示例
+- [ ] 控制台参数相关补充
+- [ ] `rocketmq` `rabbitmq` `activemq` `kafka` 区别 
 
 
 ## 使用方式
