@@ -14,6 +14,7 @@ public class BroadcastProducer {
 
     public static void main(String[] args) throws Exception {
         DefaultMQProducer producer = new DefaultMQProducer("ProducerGroupName");
+        producer.setNamesrvAddr("118.24.153.159:9876");
         producer.start();
         for (int i = 0; i < 100; i++) {
             Message msg = new Message("TopicTest",

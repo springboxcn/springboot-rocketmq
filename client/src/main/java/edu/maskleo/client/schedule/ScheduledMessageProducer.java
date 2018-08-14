@@ -8,6 +8,7 @@ public class ScheduledMessageProducer {
     public static void main(String[] args) throws Exception {
         // Instantiate a producer to send scheduled messages
         DefaultMQProducer producer = new DefaultMQProducer("ExampleProducerGroup");
+        producer.setNamesrvAddr("118.24.153.159:9876");
         // Launch producer
         producer.start();
         int totalMessagesToSend = 100;

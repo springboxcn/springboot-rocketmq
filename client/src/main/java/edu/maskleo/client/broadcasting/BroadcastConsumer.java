@@ -10,6 +10,7 @@ public class BroadcastConsumer {
 
     public static void main(String[] args) throws Exception {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("example_group_name");
+        consumer.setNamesrvAddr("118.24.153.159:9876");
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
         //set to broadcast mode
         consumer.setMessageModel(MessageModel.BROADCASTING);
